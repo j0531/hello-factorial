@@ -15,7 +15,10 @@ int fact(int n) {
     if (n <= 1) {
       return 1;
     }
-    return n * fact(n - 1);
+    else{
+      return n * fact(n - 1);
+    }
+    
   } else {
     cout << "Too large: " << n << endl;
     return -1;
@@ -30,7 +33,7 @@ int memoryLeakFunction() {
   cout << "Hello World" << endl;
   cout << "Fact 5: " << fact(5) << endl;
   // memory leak if we do not delete it
-  delete(arr);
+  delete[] arr;
   return 0;
 }
 
