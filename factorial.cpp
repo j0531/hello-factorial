@@ -17,10 +17,9 @@ int fact(int n) {
     }
     return n * fact(n - 1);
     
-  } else {
-    cout << "Too large: " << n << endl;
-    return -1;
   }
+   cout << "Too large: " << n << endl;
+   return -1;
 }
 
 int memoryLeakFunction() {
