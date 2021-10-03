@@ -11,7 +11,6 @@
 using namespace std;
 
 int fact(int N) {
-  int Foo = 200;
   if (N < 30) {
     if (N <= 1)
       return 1;
@@ -23,7 +22,6 @@ int fact(int N) {
 }
 
 int memoryLeakFunction() {
-  int X = 10;
   int *Arr = new int[10];
   for (int I = 0; I < 10; I++) {
     Arr[I] = I;
