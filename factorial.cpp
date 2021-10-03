@@ -10,26 +10,27 @@
 
 using namespace std;
 
-int fact(int N) {
-  if (N < 30) {
-    if (N <= 1)
+int fact(int n) {
+  if (n < 30) {
+    if (n <= 1) {
       return 1;
-    return N * fact(N - 1);
+    }
+    return n * fact(n - 1);
   } else {
-    cout << "Too large: " << N << endl;
+    cout << "Too large: " << n << endl;
     return -1;
   }
 }
 
 int memoryLeakFunction() {
-  int *Arr = new int[10];
-  for (int I = 0; I < 10; I++) {
-    Arr[I] = I;
+  int *arr = new int[10];
+  for (int i = 0; i < 10; i++) {
+    arr[i] = i;
   }
   cout << "Hello World" << endl;
   cout << "Fact 5: " << fact(5) << endl;
   // memory leak if we do not delete it
-  // delete(Arr);
+  delete(arr);
   return 0;
 }
 
