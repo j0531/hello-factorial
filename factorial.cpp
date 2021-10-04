@@ -33,8 +33,3 @@ int memoryLeakFunction() {
   delete[] arr;
   return 0;
 }
-
-void unusedFunction() {
-  cout << "A cout statement ";
-  cout << "that is never called " << endl;
-}
