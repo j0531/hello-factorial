@@ -18,9 +18,15 @@ void test02() {
   assert(fact(5) == 120);
 }
 
+void test03() {
+  assert(fact(1) == 1);
+  assert(fact(35) == -1);
+}
+
 int main() {
   test01();
   test02();
+  test03();
   memoryLeakFunction();
 
   cout << "Done." << endl;
